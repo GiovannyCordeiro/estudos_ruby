@@ -1,0 +1,3 @@
+def fib(num)
+
+end
