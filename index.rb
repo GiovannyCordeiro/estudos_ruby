@@ -48,4 +48,4 @@ def greet
   yield('Giovanny')
 end
 
-greet { | person | puts "Hello #{person}" }
+greet { |person| puts "Hello #{person}" }
