@@ -1,51 +1,39 @@
-instrumental_section = {
-  'teather' => 'testing'
-}
+# o LSB ruby nao funciona pq meu ruby esta em uma versao anterior
+# da qual ele necessita, preciso atualizar o ruby para essa versao
+# consigo fazer por meio disso aqui, atualizar para versao 3.3.1 (versao atual mais estavel)
+# https://www.treinaweb.com.br/blog/gerenciar-versoes-do-ruby-com-rvm.
 
-# urls_buys = {
-#   :shopy => 'www.html.br'
-# }
+# depois fazer as configuracoes necessarias
 
-urls_buys = {
-  shopy: 'www.html.br'
-}
+# O initilize method defina o estado que a classe vai ficar quando
+# for instanciada, com suas variaveis de instancia!
 
-# shopify = 'www.html.br'
-# cuponomia = 'www.html.br'
+class BookInStock
+  def initialize(isbn, price)
+    @isbn = isbn
+    @price = Float(price)
+  end
 
-# urls_buys[:shopy] = 'fjslkfjs''
-puts urls_buys[:shopy]
-puts instrumental_section['teather']
+  attr_reader :isbn
+  attr_accessor :price
 
-radation = 100
+  def to_s
+    "ISBN: #{@isbn}, Price: #{@price}"
+  end
 
-
-# statamente modifier
-
-# if radation > 300
-#   puts 'danger'
-# end
-
-# puts 'danger' if radation > 300
-
-# square = 4
-# while square < 4
-#   square *= square
-# end
-
-# square *= square while square < 4
-
-# code blocks, é com isso que posteriormente vai ser implementado callbacks
-# é por meio de block codes, que conseguimos colocar pedaços de códigos em
-# oturas funções, por exemplo:
-foo = ['apple', 'orange', 'pinple']
-
-foo.each { |fruit| puts "This fruit is #{fruit}" }
-
-def greet
-  puts 'olha o test'
-  yield('Giovanny')
-  yield('Giovanny')
+  def price_in_cents
+    (@price * 100).round
+  end
 end
 
-greet { |person| puts "Hello #{person}" }
+b1 = BookInStock.new('isbn1', 3)
+# puts b1.isbn
+# puts b1.price
+# puts '-----'
+puts "the cents is #{b1.price_in_cents}"
+
+b2 = BookInStock.new('isbn2', 3.14)
+# puts b2.price
+
+b3 = BookInStock.new('isbn3', '5.67')
+# puts b3
