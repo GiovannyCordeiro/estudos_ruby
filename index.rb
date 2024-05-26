@@ -37,3 +37,44 @@ b2 = BookInStock.new('isbn2', 3.14)
 
 b3 = BookInStock.new('isbn3', '5.67')
 # puts b3
+
+class MyClass
+  def method1; end
+  def method2; end
+  def method3; end
+  def method4; end
+  def method5; end
+
+  public :method1, :method4
+  protected :method2
+  private :method3, :method5
+end
+
+class AnotherClass
+  private def method1
+    # fdjsk
+  end
+  public def method2; end
+  protected def method3; end
+end
+
+
+person1 = 'Tim'
+# person1.freeze
+person2 = person1.dup
+person1[0] = 'J'
+
+# puts "Person 1 is: #{person1}"
+# puts "Person 2 is: #{person2}"
+
+
+
+class Book
+  attr_accessor :title
+end
+
+class Book
+  def uppercase_title
+    title.upcase
+  end
+end
