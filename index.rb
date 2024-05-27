@@ -66,15 +66,3 @@ person1[0] = 'J'
 
 # puts "Person 1 is: #{person1}"
 # puts "Person 2 is: #{person2}"
-
-
-
-class Book
-  attr_accessor :title
-end
-
-class Book
-  def uppercase_title
-    title.upcase
-  end
-end
