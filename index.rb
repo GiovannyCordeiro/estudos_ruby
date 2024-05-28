@@ -66,3 +66,27 @@ person1[0] = 'J'
 
 # puts "Person 1 is: #{person1}"
 # puts "Person 2 is: #{person2}"
+
+watherver_hash = {
+  'dog' => 'canine',
+  'cat' => 'feline',
+  'bear' => 'ursine'
+}
+
+puts watherver_hash.length
+puts watherver_hash['dog']
+
+wt_symbols = {
+  dog: 'canine',
+  cat: 'feline',
+  bear: 'ursine'
+}
+puts wt_symbols[:bear]
+
+def count_frequency(word_list)
+  counts = Hash.new(0)
+  word_list.each do |word|
+    counts[word] += 1
+  end
+  counts
+end
