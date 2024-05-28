@@ -30,7 +30,7 @@ b1 = BookInStock.new('isbn1', 3)
 # puts b1.isbn
 # puts b1.price
 # puts '-----'
-puts "the cents is #{b1.price_in_cents}"
+# puts "the cents is #{b1.price_in_cents}"
 
 b2 = BookInStock.new('isbn2', 3.14)
 # puts b2.price
