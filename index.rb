@@ -58,7 +58,6 @@ class AnotherClass
   protected def method3; end
 end
 
-
 person1 = 'Tim'
 # person1.freeze
 person2 = person1.dup
@@ -90,3 +89,5 @@ def count_frequency(word_list)
   end
   counts
 end
+
+# enumerators and iterator is equal in ruby

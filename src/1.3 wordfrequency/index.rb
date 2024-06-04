@@ -9,8 +9,9 @@ index it with the word and use the corresponding entry to keep a count."
 word_list = words_from_string(raw_text)
 counts = count_frequency(word_list)
 
-sorted = counts.sort_by { |word, count| count }
+sorted = counts.sort_by { |_word, count| count }
 top_five = sorted.last(5)
-top_five.reverse_each do |word, count|
-  puts "#{word}: #{count}"
-end
+# top_five.reverse_each do |word, count|
+#   puts "#{word}: #{count}"
+# end
+puts(top_five.reverse.map { |word, count| "#{word}: #{count}" })
