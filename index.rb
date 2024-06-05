@@ -90,4 +90,4 @@ def count_frequency(word_list)
   counts
 end
 
-# enumerators and iterator is equal in ruby
+.
