@@ -89,5 +89,3 @@ def count_frequency(word_list)
   end
   counts
 end
-
-.
