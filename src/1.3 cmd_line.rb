@@ -7,7 +7,7 @@
 
 # ruby cmd_line first_argument second_argument
 puts "Your arguments sizes is #{ARGV.size}"
-print ARGV
+puts ARGV
 
 # Answers
 # Your arguments sizes is 2

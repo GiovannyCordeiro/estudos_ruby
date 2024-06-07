@@ -11,13 +11,14 @@
 # Ex:
 
 class Book
-  attr_accessor :title
+  attr_ace :title
 end
 
 # Mais tarde...
 
 class Book
   def uppercase_title
+    title
     title.upcase
   end
 end
