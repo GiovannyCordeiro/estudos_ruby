@@ -15,8 +15,7 @@ end
 
 # usar a notação _1 para definir o primeiro argumento, para ir pegando os demais
 # é só ir aumentando os numeros _2, _3, ...
-[11,12].each { puts _1 }
-
+[11, 12].each { puts _1 }
 
 puts square
 puts sum
