@@ -72,15 +72,15 @@ watherver_hash = {
   'bear' => 'ursine'
 }
 
-puts watherver_hash.length
-puts watherver_hash['dog']
+# puts watherver_hash.length
+# puts watherver_hash['dog']
 
 wt_symbols = {
   dog: 'canine',
   cat: 'feline',
   bear: 'ursine'
 }
-puts wt_symbols[:bear]
+# puts wt_symbols[:bear]
 
 def count_frequency(word_list)
   counts = Hash.new(0)
@@ -88,4 +88,43 @@ def count_frequency(word_list)
     counts[word] += 1
   end
   counts
+end
+
+# O que é o parallel assignment?
+# é quando ocorre basicamente uma atribuição de duas variaveis paralelamente
+
+i1 = 1
+i2 = 1
+
+i1, i2 = i2, i1 + i2
+
+# o que isso ta dizendo?
+# atribui para a variavel i1 o valor atual de i2, que nesse caso é 1
+# atribui para a variavel i2 a soma do valor atual de i1 e i2, que nesse caso é 2
+
+# [1, 3, 5, 7, 9].each { |number| puts number }
+
+value = [1, 3, 5, 7, 9].find { |number| number + 2 > 6 }
+# puts value
+
+arr = ['giovanny', 'douglas', 'maria', 3, { name: 'fodasej' }]
+# print arr.push('outra coisa')
+# arr2 =
+
+arr_num = [1, 3, 5, 7]
+# puts arr_num.reduce(0) { |sum, number| sum + number }
+# puts(arr_num.reduce(1) { |acc, number| acc * number })
+
+class File
+  def self.open_and_process(*args)
+    file = File.open(*args)
+    yield file
+    file.close
+  end
+end
+
+File.open_and_process('testfile', 'r') do |file|
+  while line = file.gets
+    puts line
+  end
 end
