@@ -13,11 +13,9 @@ class ProcExample
   end
 end
 
-
 eg = ProcExample.new
-eg.pass_in_block { |parameter| puts "Que doideira mermao: #{parameter}"}
+eg.pass_in_block { |parameter| puts "Que doideira mermao: #{parameter}" }
 eg.use_proc('Giovanny')
-
 
 # Essa forma converte um bloco de codigo em uma variavel chamada block
 # e retorna ela. Para chamar o bloco voce pode usar o metodo call.
@@ -39,10 +37,9 @@ bo.call 'cat'
 
 # A sintaxe sintaxe stabbly lambda é uma abreviação do Ruby kernel method lamba
 
-bo = lambda { |param| puts "You called me with #{param}" }
+bo = ->(param) { puts "You called me with #{param}" }
 bo.call 99
 bo.call 'cat'
-
 
 # Existem pequenas diferenteças entre o comportamento do block_object (ou, em sua essencia, lambdas) e dos
 # block codes feito por proc classes, lambda retornam um erro se chamados com o numero errado de argumentos, enquanto procs

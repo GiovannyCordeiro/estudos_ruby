@@ -115,16 +115,26 @@ arr_num = [1, 3, 5, 7]
 # puts arr_num.reduce(0) { |sum, number| sum + number }
 # puts(arr_num.reduce(1) { |acc, number| acc * number })
 
-class File
-  def self.open_and_process(*args)
-    file = File.open(*args)
-    yield file
-    file.close
-  end
+# class File
+#   def self.open_and_process(*args)
+#     file = File.open(*args)
+#     yield file
+#     file.close
+#   end
+# end
+
+# File.open_and_process('testfile', 'r') do |file|
+#   while line = file.gets
+#     puts line
+#   end
+# end
+
+def create_block_object(&block)
+  block
 end
 
-File.open_and_process('testfile', 'r') do |file|
-  while line = file.gets
-    puts line
-  end
-end
+bo = create_block_object { |parameter| puts "Giovanny #{parameter}" }
+bo.call('O BRABO')
+
+tt = ->(param) { puts "parameter #{param}" }
+tt.call 'Giovanny'
